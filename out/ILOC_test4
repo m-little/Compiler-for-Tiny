@@ -1,0 +1,8 @@
+loadI 3 -> r0
+i2i r0 -> r1
+loadI 2 -> r2
+i2i r2 -> r3
+loadI 3 -> r4
+i2i r4 -> r5
+add r1, r5 -> r6
+i2i r6 -> r7

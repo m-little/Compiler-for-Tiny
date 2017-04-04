@@ -1,0 +1,14 @@
+# calculate the factorial of n
+
+var n := 0;
+read n;
+var acc := 1;
+
+while (n > 1)
+{
+    acc := acc * n;
+    n := n - 1;
+}
+
+write acc;
+

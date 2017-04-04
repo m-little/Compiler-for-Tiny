@@ -1,0 +1,21 @@
+# read a and b, swap them if a is greater than b, then print them
+
+var a := 0;
+var b := 0;
+
+read a;
+read b;
+
+if (a > b)
+{
+    var t := a;
+    a := b;
+    b := t;
+}
+else
+{
+    pass;
+}
+
+write a;
+write b;

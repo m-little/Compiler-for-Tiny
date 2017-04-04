@@ -1,0 +1,18 @@
+loadI 0 -> r0
+i2i r0 -> r1
+read r1
+loadI 1 -> r2
+i2i r2 -> r3
+label0: nop
+loadI 1 -> r4
+comp_RT r1, r4 ->r5
+cbr r5 ->label1, label2
+label1: nop
+mult r3, r1 ->r6
+i2i r6 -> r3
+loadI 1 -> r7
+sub r1, r7 -> r8
+i2i r8 -> r1
+jumpI label0
+label2: nop
+write r3

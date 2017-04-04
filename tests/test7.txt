@@ -1,0 +1,22 @@
+proc main() {
+    var x := 0;
+    read x;
+    call f(x);
+    write x;
+}
+
+proc f(n) {
+    var temp := n * 2;
+    call g(n-1);
+    write temp;
+}
+
+proc g(n) {
+    if (n > 0) {
+        write n;
+        call f(n/2);
+    } else {
+        pass;
+    }
+}
+

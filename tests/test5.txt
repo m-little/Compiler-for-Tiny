@@ -1,0 +1,19 @@
+var go := 1;
+var input := 0;
+var total := 0;
+
+while (go = 1)
+{
+    read input;
+
+    if (input < 0)
+    {
+        go := 0;
+    }
+    else
+    {
+        total := total + input;
+    }   
+}
+
+write total;

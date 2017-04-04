@@ -1,0 +1,26 @@
+loadI 1 -> r0
+i2i r0 -> r1
+loadI 0 -> r2
+i2i r2 -> r3
+loadI 0 -> r4
+i2i r4 -> r5
+label0: nop
+loadI 1 -> r6
+comp_EQ r1, r6 ->r7
+cbr r7 ->label1, label2
+label1: nop
+read r3
+loadI 0 -> r8
+comp_LT r3, r8 ->r9
+cbr r9 ->label3, label4
+label3: nop
+loadI 0 -> r10
+i2i r10 -> r1
+jumpI label5
+label4: nop
+add r5, r3 -> r11
+i2i r11 -> r5
+label5: nop
+jumpI label0
+label2: nop
+write r5

@@ -1,0 +1,47 @@
+main: nop
+loadAI SP, -2  ->r0
+loadI 1 -> r1
+i2i r1 -> r2
+label0: nop
+cbr r2 ->label1, label2
+label1: nop
+read r2
+storeAI r0 -> SP, 0
+storeAI r2 -> SP, 1
+storeAI r2 -> SP, 2
+loadI L3 -> r3
+storeAI r3 -> SP, 3
+addI SP, 4 -> SP
+jumpI f
+L3: nop
+subI SP, 4 -> SP
+loadAI SP, 0 -> r0
+loadAI SP, 1 -> r2
+jumpI label0
+label2: nop
+loadAI SP, -1 -> r4
+jump r4
+f: nop
+loadAI SP, -2  ->r5
+storeAI r5 -> SP, 0
+loadI 1 -> r6
+add r5, r6 -> r7
+storeAI r7-> SP1
+storeAI r5-> SP-2
+loadI L4 -> r8
+storeAI r8 -> SP, -1
+addI SP, 0 -> SP
+jumpI g
+L4: nop
+subI SP, 0 -> SP
+loadAI SP, 0 -> r5
+write r5
+loadAI SP, -1 -> r9
+jump r9
+g: nop
+loadAI SP, -2-> r10
+loadAI SP, -3-> r11
+write r10
+write r11
+loadAI SP, -1 -> r12
+jump r12

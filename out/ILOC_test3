@@ -1,0 +1,9 @@
+loadI 2 -> r0
+i2i r0 -> r1
+loadI 0 -> r2
+i2i r2 -> r3
+read r3
+loadI 5 -> r4
+add r4, r3 -> r5
+i2i r5 -> r1
+write r1

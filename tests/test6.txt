@@ -1,0 +1,21 @@
+proc main( in )
+{
+    var x := 1;
+    while( x )
+    {
+        read x;
+        call f( x );
+    }
+}
+
+proc f( x )
+{
+    call g( x, x+1 );
+    write x;
+}
+
+proc g( x, y )
+{
+    write x;
+    write y;
+}
